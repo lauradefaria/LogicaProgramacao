@@ -57,7 +57,6 @@ namespace AdaTech.ListaExercicios
         }
         static void Exercicio1()
         {
-            Console.Clear();
             Temperatura valorTemperatura = new Temperatura();
             valorTemperatura.EscolhaUsuario();
             if(valorTemperatura.Chave == "1")
@@ -66,13 +65,24 @@ namespace AdaTech.ListaExercicios
             }
             else { Console.WriteLine($"Valor em Fahrenheit: {valorTemperatura.NumeroConvertido}"); }
 
-            Console.WriteLine("Pressione qualquer tecla para continuar...");
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
             Console.ReadLine();
             return;
         }
         static void Exercicio2()
         {
+            Primo primo = new Primo();
+            if (primo.EhPrimo())
+            {
+                Console.WriteLine($"\n{primo.Numero} é primo!");
+            }
+            else
+            {
+                Console.WriteLine($"\n{primo.Numero} não é primo!");
+            }
 
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadLine();
         }
         static void Exercicio3()
         {

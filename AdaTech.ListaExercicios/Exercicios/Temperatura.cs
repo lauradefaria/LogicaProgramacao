@@ -21,7 +21,7 @@ namespace AdaTech.ListaExercicios.Exercicios
             get { return _chave; }
             set { _chave = value; }
         }
-        public void EscolhaUsuario()
+        internal void EscolhaUsuario()
         {
             bool flag = true;
             do
@@ -47,7 +47,7 @@ namespace AdaTech.ListaExercicios.Exercicios
             Console.Clear();
         }
 
-        private void ConversaoCF()
+        internal void ConversaoCF()
         {
             Console.Clear();
             decimal numero;
@@ -60,7 +60,7 @@ namespace AdaTech.ListaExercicios.Exercicios
             NumeroConvertido = ((numero * 9) / 5) + 32;
             Console.Clear();
         }
-        private void ConversaoFC()
+        internal void ConversaoFC()
         {
             Console.Clear();
             decimal numero;

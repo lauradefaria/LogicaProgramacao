@@ -61,9 +61,9 @@ namespace AdaTech.ListaExercicios
             valorTemperatura.EscolhaUsuario();
             if(valorTemperatura.Chave == "1")
             {
-                Console.WriteLine($"Valor em Fahrenheit: {valorTemperatura.NumeroConvertido}");
+                Console.WriteLine($"\nValor em Fahrenheit: {valorTemperatura.NumeroConvertido}");
             }
-            else { Console.WriteLine($"Valor em Fahrenheit: {valorTemperatura.NumeroConvertido}"); }
+            else { Console.WriteLine($"\nValor em Fahrenheit: {valorTemperatura.NumeroConvertido}"); }
 
             Console.WriteLine("\nPressione qualquer tecla para continuar...");
             Console.ReadLine();
@@ -83,9 +83,24 @@ namespace AdaTech.ListaExercicios
 
             Console.WriteLine("\nPressione qualquer tecla para continuar...");
             Console.ReadLine();
+            return;
         }
         static void Exercicio3()
         {
+            Fatorial fatorial = new Fatorial();
+            fatorial.CalcularFatorial();
+            if(fatorial.ValorTotal == 0)
+            {
+                Console.WriteLine($"O número {fatorial.Numero} não possui fatorial, pois é negativo");
+            }
+            else
+            {
+                Console.WriteLine($"O fatorial do número {fatorial.Numero} é: {fatorial.ValorTotal}");
+            }
+
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadLine();
+            return;
 
         }
         static void Exercicio4()

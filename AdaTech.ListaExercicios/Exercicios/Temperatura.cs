@@ -49,29 +49,27 @@ namespace AdaTech.ListaExercicios.Exercicios
 
         internal void ConversaoCF()
         {
-            Console.Clear();
             decimal numero;
 
             do
             {
+                Console.Clear();
                 Console.WriteLine("Digite a temperatura em Celsius: ");
             } while (!decimal.TryParse(Console.ReadLine(), out numero));
 
             NumeroConvertido = ((numero * 9) / 5) + 32;
-            Console.Clear();
         }
         internal void ConversaoFC()
         {
-            Console.Clear();
             decimal numero;
 
             do
             {
+                Console.Clear();
                 Console.WriteLine("Digite a temperatura em Fahrenheit: ");
             } while (!decimal.TryParse(Console.ReadLine(), out numero));
 
             NumeroConvertido = ((numero - 32) * 5) / 9;
-            Console.Clear();
         }
     }
 }

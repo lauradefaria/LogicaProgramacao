@@ -105,31 +105,50 @@ namespace AdaTech.ListaExercicios
         }
         static void Exercicio4()
         {
+            ArrayCrescente array = new ArrayCrescente();
+            array.Ordenar();
+            Console.WriteLine("\nArray ordenado em ordem crescente: ");
+            Console.WriteLine(string.Join(",", array.Numeros));
 
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadLine();
+            return;
         }
         static void Exercicio5()
         {
-
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadLine();
+            return;
         }
         static void Exercicio6()
         {
-
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadLine();
+            return;
         }
         static void Exercicio7()
         {
-
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadLine();
+            return;
         }
         static void Exercicio8()
         {
-
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadLine();
+            return;
         }
         static void Exercicio9()
         {
-
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadLine();
+            return;
         }
         static void Exercicio10()
         {
-
+            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.ReadLine();
+            return;
         }
     }
 }

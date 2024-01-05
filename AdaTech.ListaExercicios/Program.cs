@@ -160,6 +160,25 @@ namespace AdaTech.ListaExercicios
         }
         static void Exercicio8()
         {
+            Senha validacao = new Senha();
+            switch (validacao.ehValido()){
+                case 1:
+                    Console.WriteLine($"A senha '{validacao.SenhaUsuario}' não é válida, pois não atingiu a quantidade mínima de caracteres.");
+                    break;
+                case 2:
+                    Console.WriteLine($"A senha '{validacao.SenhaUsuario}' não é válida, pois não possui um número.");
+                    break;
+                case 3:
+                    Console.WriteLine($"A senha '{validacao.SenhaUsuario}' não é válida, pois não possui uma letra maiúscula.");
+                    break;
+                case 4:
+                    Console.WriteLine($"A senha '{validacao.SenhaUsuario}' não é válida, pois não possui uma letra minúscula.");
+                    break;
+                default:
+                    Console.WriteLine($"A senha '{validacao.SenhaUsuario}' é válida.");
+                    break;
+            }
+
             Console.WriteLine("\nPressione qualquer tecla para continuar...");
             Console.ReadLine();
             return;

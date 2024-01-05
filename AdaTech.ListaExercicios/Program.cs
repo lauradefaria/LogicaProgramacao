@@ -10,7 +10,8 @@ namespace AdaTech.ListaExercicios
             while(flag) {
                 Console.Clear();
                 Console.WriteLine("\t\tLista de Exercícios - Lógica de Programação\n");
-                Console.WriteLine("1 - Conversão de Temperatura\n2 - Número Primo\n3 - Fatorial de número inteiro\n4 - Array em ordem crescente\n5 - Palavra palíndromo\n6 - Raiz quadrada\n7 - Conversão Real para Dólar\n8 - validação de senha\n9 - Validação de CPF\n10 - Frequência de palavra\n\nQ - SAIR DO PROGRAMA");
+                Console.WriteLine("1 - Conversão de Temperatura\n2 - Número Primo\n3 - Fatorial de número inteiro\n4 - Array em ordem crescente\n5 - Palavra palíndromo\n6 - Raiz quadrada\n7 - Conversão Real para Dólar\n8 - validação de senha\n9 - Validação de CPF\n10 - Frequência de palavra\n\nQ - SAIR DO PROGRAMA\n");
+                Console.Write("Digite a opção: ");
                 string chave = Console.ReadLine();
 
                 switch (chave)
@@ -61,11 +62,11 @@ namespace AdaTech.ListaExercicios
             valorTemperatura.EscolhaUsuario();
             if(valorTemperatura.Chave == "1")
             {
-                Console.WriteLine($"\nValor em Fahrenheit: {valorTemperatura.NumeroConvertido}");
+                Console.WriteLine($"Valor em Fahrenheit: {valorTemperatura.NumeroConvertido}");
             }
-            else { Console.WriteLine($"\nValor em Fahrenheit: {valorTemperatura.NumeroConvertido}"); }
+            else { Console.WriteLine($"Valor em Celsius: {valorTemperatura.NumeroConvertido}"); }
 
-            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.WriteLine("\nPressione ENTER para continuar...");
             Console.ReadLine();
             return;
         }
@@ -81,7 +82,7 @@ namespace AdaTech.ListaExercicios
                 Console.WriteLine($"\n{primo.Numero} não é primo!");
             }
 
-            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.WriteLine("\nPressione ENTER para continuar...");
             Console.ReadLine();
             return;
         }
@@ -91,14 +92,14 @@ namespace AdaTech.ListaExercicios
             fatorial.CalcularFatorial();
             if(fatorial.ValorTotal == 0)
             {
-                Console.WriteLine($"O número {fatorial.Numero} não possui fatorial, pois é negativo");
+                Console.WriteLine($"\nO número {fatorial.Numero} não possui fatorial, pois é negativo");
             }
             else
             {
-                Console.WriteLine($"O fatorial do número {fatorial.Numero} é: {fatorial.ValorTotal}");
+                Console.WriteLine($"\nO fatorial do número {fatorial.Numero} é: {fatorial.ValorTotal}");
             }
 
-            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.WriteLine("\nPressione ENTER para continuar...");
             Console.ReadLine();
             return;
 
@@ -107,10 +108,10 @@ namespace AdaTech.ListaExercicios
         {
             ArrayCrescente array = new ArrayCrescente();
             array.Ordenar();
-            Console.WriteLine("\nArray ordenado em ordem crescente: ");
+            Console.Write("Array ordenado em ordem crescente: ");
             Console.WriteLine(string.Join(",", array.Numeros));
 
-            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.WriteLine("\nPressione ENTER para continuar...");
             Console.ReadLine();
             return;
         }
@@ -119,14 +120,14 @@ namespace AdaTech.ListaExercicios
             Palindromo palindromo = new Palindromo();
             if (palindromo.VerificarPalindromo())
             {
-                Console.WriteLine($"{palindromo.Palavra} é um palíndromo.");
+                Console.WriteLine($"\n{palindromo.Palavra} é um palíndromo.");
             }
             else
             {
-                Console.WriteLine($"{palindromo.Palavra} não é um palíndromo.");
+                Console.WriteLine($"\n{palindromo.Palavra} não é um palíndromo.");
             }
 
-            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.WriteLine("\nPressione ENTER para continuar...");
             Console.ReadLine();
             return;
         }
@@ -136,14 +137,14 @@ namespace AdaTech.ListaExercicios
             raiz.CalcularRaiz();
             if (raiz.Flag)
             {
-                Console.WriteLine($"\nA raiz quadrada exata do número {raiz.Numero} é {raiz.ResultadoRaiz}.");
+                Console.WriteLine($"\nA raiz quadrada exata do número {raiz.Numero} é {raiz.ResultadoRaiz:F0}.");
             }
             else
             {
                 Console.WriteLine($"\nA raiz quadrada aproximada do número {raiz.Numero} é {raiz.ResultadoRaiz}.");
             }
 
-            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.WriteLine("\nPressione ENTER para continuar...");
             Console.ReadLine();
             return;
         }
@@ -154,7 +155,7 @@ namespace AdaTech.ListaExercicios
             Console.Clear();
             Console.WriteLine($"Valor em Reais: R${valor.ValorReal}\nTaxa de conversão para dolar: ${valor.TaxaConversao}\nValor convertido em dólares: ${valor.ValorDolar}");
 
-            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.WriteLine("\nPressione ENTER para continuar...");
             Console.ReadLine();
             return;
         }
@@ -163,23 +164,23 @@ namespace AdaTech.ListaExercicios
             Senha validacao = new Senha();
             switch (validacao.ehValido()){
                 case 1:
-                    Console.WriteLine($"A senha '{validacao.SenhaUsuario}' não é válida, pois não atingiu a quantidade mínima de caracteres.");
+                    Console.WriteLine($"\nA senha '{validacao.SenhaUsuario}' não é válida, pois não atingiu a quantidade mínima de caracteres.");
                     break;
                 case 2:
-                    Console.WriteLine($"A senha '{validacao.SenhaUsuario}' não é válida, pois não possui um número.");
+                    Console.WriteLine($"\nA senha '{validacao.SenhaUsuario}' não é válida, pois não possui um número.");
                     break;
                 case 3:
-                    Console.WriteLine($"A senha '{validacao.SenhaUsuario}' não é válida, pois não possui uma letra maiúscula.");
+                    Console.WriteLine($"\nA senha '{validacao.SenhaUsuario}' não é válida, pois não possui uma letra maiúscula.");
                     break;
                 case 4:
-                    Console.WriteLine($"A senha '{validacao.SenhaUsuario}' não é válida, pois não possui uma letra minúscula.");
+                    Console.WriteLine($"\nA senha '{validacao.SenhaUsuario}' não é válida, pois não possui uma letra minúscula.");
                     break;
                 default:
-                    Console.WriteLine($"A senha '{validacao.SenhaUsuario}' é válida.");
+                    Console.WriteLine($"\nA senha '{validacao.SenhaUsuario}' é válida.");
                     break;
             }
 
-            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.WriteLine("\nPressione ENTER para continuar...");
             Console.ReadLine();
             return;
         }
@@ -189,17 +190,17 @@ namespace AdaTech.ListaExercicios
             switch (validacao.ehValido())
             {
                 case 1:
-                    Console.WriteLine($"O cpf '{validacao.CpfUsuario}' não é válido, pois não está no formato correto.");
+                    Console.WriteLine($"\nO cpf '{validacao.CpfUsuario}' não é válido, pois não está no formato correto.");
                     break;
                 case 2:
-                    Console.WriteLine($"O cpf '{validacao.CpfUsuario}' não é válido, houve um erro na validação do digito verificador.");
+                    Console.WriteLine($"\nO cpf '{validacao.CpfUsuario}' não é válido, houve um erro na validação do digito verificador.");
                     break;
                 default:
-                    Console.WriteLine($"O cpf '{validacao.CpfUsuario}' é válido.");
+                    Console.WriteLine($"\nO cpf '{validacao.CpfUsuario}' é válido.");
                     break;
             }
 
-            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.WriteLine("\nPressione ENTER para continuar...");
             Console.ReadLine();
             return;
         }
@@ -208,12 +209,12 @@ namespace AdaTech.ListaExercicios
             PalavraTexto texto = new PalavraTexto();
             texto.AnaliseTextual();
             Console.Clear();
-            Console.WriteLine("\t\tFrequência das Palavras");
+            Console.WriteLine("\t\tFrequência das Palavras\n");
             foreach (var palavra in texto.ExibirFrequencia())
             {
                 Console.WriteLine($"Palavra '{palavra.Key}': {palavra.Value} vez(es)");
             }
-            Console.WriteLine("\nPressione qualquer tecla para continuar...");
+            Console.WriteLine("\nPressione ENTER para continuar...");
             Console.ReadLine();
             return;
         }

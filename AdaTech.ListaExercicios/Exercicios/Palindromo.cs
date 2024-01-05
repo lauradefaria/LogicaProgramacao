@@ -19,6 +19,7 @@ namespace AdaTech.ListaExercicios.Exercicios
             string palavra;
             do
             {
+                Console.Clear();
                 Console.Write("Digite uma palavra para verificar se é um palíndromo: ");
                 _palavra = Console.ReadLine();
             } while (VerificarApenasLetras(_palavra));
@@ -36,10 +37,10 @@ namespace AdaTech.ListaExercicios.Exercicios
             {
                 if (char.IsLetter(caractere))
                 {
-                    return true;
+                    return false;
                 }
             }
-            return false; 
+            return true; 
         }
     }
 }

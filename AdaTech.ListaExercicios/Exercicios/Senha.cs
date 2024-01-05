@@ -24,24 +24,23 @@ namespace AdaTech.ListaExercicios.Exercicios
 
             if (_senhaUsuario.Length < 8)
             {
-                erro = 1;
+                return 1;
             }
             if (!_senhaUsuario.Any(char.IsDigit))
             {
-                erro = 4;
+                return 2;
             }
 
             if (!_senhaUsuario.Any(char.IsUpper))
             {
-                erro = 2;
+                return 3;
             }
             if (!_senhaUsuario.Any(char.IsLower))
             {
-                erro = 3;
+                return 4;
             }
 
-            Console.Clear();
-            return erro;
+            return 0;
         }
     }
 }

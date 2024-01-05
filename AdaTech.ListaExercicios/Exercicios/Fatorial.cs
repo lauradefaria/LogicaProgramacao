@@ -29,7 +29,7 @@ namespace AdaTech.ListaExercicios.Exercicios
             {
                 Console.Clear();
                 Console.Write("Digite o número que deseja descobrir: ");
-            } while (!int.TryParse(Console.ReadLine(), out _numero));
+            } while (!int.TryParse(Console.ReadLine(), out _numero) || _numero < 0);
 
             if (_numero == 0 || _numero == 1)
             {
@@ -37,11 +37,12 @@ namespace AdaTech.ListaExercicios.Exercicios
             }
             else if(_numero > 1)
             {
-                _valorTotal = _numero;
+                _valorTotal = 1;
                 int n = _numero;
+
                 while(n > 0)
                 {
-                    _valorTotal += n * _valorTotal;
+                    _valorTotal *= n;
                     n--;
                 }
             }

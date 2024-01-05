@@ -60,7 +60,6 @@ namespace AdaTech.ListaExercicios.Exercicios
                 return 2;
             }
 
-            Console.Clear();
             return 0;
         }
     }

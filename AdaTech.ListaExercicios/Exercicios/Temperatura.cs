@@ -28,8 +28,10 @@ namespace AdaTech.ListaExercicios.Exercicios
             {
                 Console.Clear();
                 Console.WriteLine("\t\tDigite a temperatura que deseja converter\n");
-                Console.WriteLine("1: Celsius --> Fahrenheit\n2: Fahrenheit --> Celsius");
+                Console.WriteLine("1: Celsius --> Fahrenheit\n2: Fahrenheit --> Celsius\n");
+                Console.Write("Digite a opção: ");
                 _chave = Console.ReadLine();
+
                 switch (_chave) {
                     case "1":
                         ConversaoCF();
@@ -43,8 +45,6 @@ namespace AdaTech.ListaExercicios.Exercicios
                         break;
                 }
             }while (flag);
-
-            Console.Clear();
         }
 
         internal void ConversaoCF()

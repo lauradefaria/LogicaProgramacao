@@ -10,15 +10,15 @@ namespace AdaTech.ListaExercicios.Exercicios
 {
     internal class RaizQuadrada
     {
-        private double _numero;
-        private double _resultadoRaiz;
+        private decimal _numero;
+        private decimal _resultadoRaiz;
         private bool _flag;
-        internal double Numero
+        internal decimal Numero
         {
             get { return _numero; }
             set { _numero = value; }
         }
-        internal double ResultadoRaiz
+        internal decimal ResultadoRaiz
         {
             get { return _resultadoRaiz; }
             set { _resultadoRaiz = value; }
@@ -38,7 +38,7 @@ namespace AdaTech.ListaExercicios.Exercicios
             {
                 Console.Clear();
                 Console.Write("Digite um número para calcular a raiz quadrada: ");
-            } while (!double.TryParse(Console.ReadLine(), out _numero) || _numero < 0);
+            } while (!decimal.TryParse(Console.ReadLine(), out _numero) || _numero < 0);
 
             if (_numero == 0 || _numero == 1)
             {
@@ -47,24 +47,33 @@ namespace AdaTech.ListaExercicios.Exercicios
             }
             else
             {
-                for (double i = 2; i <= _numero / 2; i++)
+                bool encontrouRaiz = false;
+                decimal estimativa = _numero / 2;
+                decimal proximaEstimativa;
+
+                for (int iteracao = 0; iteracao < 10; iteracao++) // Ajuste do número de iterações para melhorar a estimativa
                 {
-                    if (i * i == _numero)
+                    proximaEstimativa = (_numero / estimativa + estimativa) / 2;
+
+                    if (proximaEstimativa * proximaEstimativa == _numero) // Verifica a convergência
                     {
-                        _resultadoRaiz = i;
-                        _flag = true;
+                        _resultadoRaiz = proximaEstimativa;
+                        encontrouRaiz = true;
                         break;
                     }
-                    else if (i * i > _numero)
-                    {
-                        double estimativa = _numero / 2; 
 
-                        for (int j = 0; j < i; j++) 
-                        {
-                            estimativa = (estimativa + _numero / estimativa) / 2;
-                        }
-                        _resultadoRaiz = estimativa;
-                        break;
+                    estimativa = proximaEstimativa;
+                }
+
+                if (!encontrouRaiz)
+                {
+                    _resultadoRaiz = estimativa;
+                }
+                else
+                {
+                    if(_numero != 2)
+                    {
+                        _flag = true;
                     }
                 }
             }

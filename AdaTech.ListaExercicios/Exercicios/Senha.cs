@@ -19,7 +19,7 @@ namespace AdaTech.ListaExercicios.Exercicios
         {
             int erro = 0;
             Console.Clear();
-            Console.WriteLine("Digite sua senha para validação: ");
+            Console.Write("Digite sua senha para validação: ");
             _senhaUsuario = Console.ReadLine();
 
             if (_senhaUsuario.Length < 8)

@@ -20,7 +20,7 @@ namespace AdaTech.ListaExercicios.Exercicios
             do
             {
                 Console.Clear();
-                Console.WriteLine("Digite o número que deseja descobrir: ");
+                Console.Write("Digite o número que deseja descobrir: ");
             } while (!int.TryParse(Console.ReadLine(), out _numero));
 
             if (_numero <= 1)  

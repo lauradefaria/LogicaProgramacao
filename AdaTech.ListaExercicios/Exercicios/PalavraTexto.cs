@@ -12,7 +12,7 @@ namespace AdaTech.ListaExercicios.Exercicios
         internal void AnaliseTextual()
         {
             Console.Clear();
-            Console.WriteLine("Digite um texto: ");
+            Console.Write("Digite um texto: ");
             string texto = Console.ReadLine();
             string[] palavras = texto.Split(new char[] { ' ', '.', ',', ';', ':', '!', '?' }, StringSplitOptions.RemoveEmptyEntries);
 

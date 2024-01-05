@@ -19,16 +19,17 @@ namespace AdaTech.ListaExercicios.Exercicios
             do
             {
                 Console.Clear();
-                Console.WriteLine("Digite a quantidade de inteiros que deseja ordenar: ");
+                Console.Write("Digite a quantidade de inteiros que deseja ordenar: ");
             } while (!int.TryParse(Console.ReadLine(), out quantidade));
 
             int numero, contagem=1;
             while(contagem <= quantidade)
             {
+                Console.Clear();
                 do
                 {
                     Console.Clear();
-                    Console.WriteLine($"Digite o {contagem}° número: ");
+                    Console.Write($"Digite o {contagem}° número: ");
                 } while (!int.TryParse(Console.ReadLine(), out numero));
 
                 _numeros[contagem] = numero;

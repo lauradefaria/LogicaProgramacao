@@ -17,7 +17,7 @@ namespace AdaTech.ListaExercicios.Exercicios
         internal int ehValido()
         {
             Console.Clear();
-            Console.WriteLine("Digite seu cpf (ex: 111.111.111-11): ");
+            Console.Write("Digite seu cpf (ex: 111.111.111-11): ");
             _cpfUsuario = Console.ReadLine();
 
             string cpf = new string(_cpfUsuario.ToCharArray().Where(char.IsDigit).ToArray());

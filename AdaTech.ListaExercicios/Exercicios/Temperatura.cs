@@ -54,7 +54,7 @@ namespace AdaTech.ListaExercicios.Exercicios
             do
             {
                 Console.Clear();
-                Console.WriteLine("Digite a temperatura em Celsius: ");
+                Console.Write("Digite a temperatura em Celsius: ");
             } while (!decimal.TryParse(Console.ReadLine(), out numero));
 
             NumeroConvertido = ((numero * 9) / 5) + 32;
@@ -66,7 +66,7 @@ namespace AdaTech.ListaExercicios.Exercicios
             do
             {
                 Console.Clear();
-                Console.WriteLine("Digite a temperatura em Fahrenheit: ");
+                Console.Write("Digite a temperatura em Fahrenheit: ");
             } while (!decimal.TryParse(Console.ReadLine(), out numero));
 
             NumeroConvertido = ((numero - 32) * 5) / 9;

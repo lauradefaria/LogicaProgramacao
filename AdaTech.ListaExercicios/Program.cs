@@ -132,6 +132,17 @@ namespace AdaTech.ListaExercicios
         }
         static void Exercicio6()
         {
+            RaizQuadrada raiz = new RaizQuadrada();
+            raiz.CalcularRaiz();
+            if (raiz.Flag)
+            {
+                Console.WriteLine($"\nA raiz quadrada exata do número {raiz.Numero} é {raiz.ResultadoRaiz}.");
+            }
+            else
+            {
+                Console.WriteLine($"\nA raiz quadrada aproximada do número {raiz.Numero} é {raiz.ResultadoRaiz}.");
+            }
+
             Console.WriteLine("\nPressione qualquer tecla para continuar...");
             Console.ReadLine();
             return;

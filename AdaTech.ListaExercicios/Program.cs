@@ -116,6 +116,16 @@ namespace AdaTech.ListaExercicios
         }
         static void Exercicio5()
         {
+            Palindromo palindromo = new Palindromo();
+            if (palindromo.VerificarPalindromo())
+            {
+                Console.WriteLine($"{palindromo.Palavra} é um palíndromo.");
+            }
+            else
+            {
+                Console.WriteLine($"{palindromo.Palavra} não é um palíndromo.");
+            }
+
             Console.WriteLine("\nPressione qualquer tecla para continuar...");
             Console.ReadLine();
             return;

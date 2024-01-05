@@ -185,6 +185,20 @@ namespace AdaTech.ListaExercicios
         }
         static void Exercicio9()
         {
+            Cpf validacao = new Cpf();
+            switch (validacao.ehValido())
+            {
+                case 1:
+                    Console.WriteLine($"O cpf '{validacao.CpfUsuario}' não é válido, pois não está no formato correto.");
+                    break;
+                case 2:
+                    Console.WriteLine($"O cpf '{validacao.CpfUsuario}' não é válido, houve um erro na validação do digito verificador.");
+                    break;
+                default:
+                    Console.WriteLine($"O cpf '{validacao.CpfUsuario}' é válido.");
+                    break;
+            }
+
             Console.WriteLine("\nPressione qualquer tecla para continuar...");
             Console.ReadLine();
             return;

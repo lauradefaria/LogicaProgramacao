@@ -30,9 +30,9 @@ namespace AdaTech.ListaExercicios.Exercicios
 
             return palavra == new string(palavraInvertida);
         }
-        private bool VerificarApenasLetras(string texto)
+        private bool VerificarApenasLetras(string palavraUsuario)
         {
-            foreach (char caractere in texto)
+            foreach (char caractere in palavraUsuario)
             {
                 if (char.IsLetter(caractere))
                 {

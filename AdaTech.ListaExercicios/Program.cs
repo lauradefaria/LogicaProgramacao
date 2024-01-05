@@ -205,6 +205,14 @@ namespace AdaTech.ListaExercicios
         }
         static void Exercicio10()
         {
+            PalavraTexto texto = new PalavraTexto();
+            texto.AnaliseTextual();
+            Console.Clear();
+            Console.WriteLine("\t\tFrequência das Palavras");
+            foreach (var palavra in texto.ExibirFrequencia())
+            {
+                Console.WriteLine($"Palavra '{palavra.Key}': {palavra.Value} vez(es)");
+            }
             Console.WriteLine("\nPressione qualquer tecla para continuar...");
             Console.ReadLine();
             return;

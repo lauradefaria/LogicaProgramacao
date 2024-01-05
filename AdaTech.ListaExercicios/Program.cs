@@ -149,6 +149,11 @@ namespace AdaTech.ListaExercicios
         }
         static void Exercicio7()
         {
+            Conversao valor = new Conversao();
+            valor.ConverterRealDolar();
+            Console.Clear();
+            Console.WriteLine($"Valor em Reais: R${valor.ValorReal}\nTaxa de conversão para dolar: ${valor.TaxaConversao}\nValor convertido em dólares: ${valor.ValorDolar}");
+
             Console.WriteLine("\nPressione qualquer tecla para continuar...");
             Console.ReadLine();
             return;
